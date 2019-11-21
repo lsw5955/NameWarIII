@@ -10,7 +10,7 @@ public class Test : MonoBehaviour
     public void DoATest()
     {
         Warrior w = new Warrior();
-        w.Name = nameInputField.text;
+        w.XingMing = nameInputField.text;
         w.BornWords();
     }
 }

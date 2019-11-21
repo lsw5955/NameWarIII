@@ -6,11 +6,11 @@ public class Warrior : Hero
 { 
     public Warrior()
     {
-        Occupation= "战士";
-        MaxHp = 500;
-        Power = 70;
-        Accuarcy = 95;
-        Dodge = 25;
+        ZhiYe= "战士";
+        ShengMing = 500;
+        GongJi = 70;
+        MingZhong = 95;
+        ShanBi = 25;
     }
 
 }
