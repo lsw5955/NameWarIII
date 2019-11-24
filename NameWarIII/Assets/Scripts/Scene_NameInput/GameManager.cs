@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -22,8 +23,9 @@ public class GameManager : MonoBehaviour
     public void Battle()
     {
         //为玩家数据赋值, 数据使用姓名作为随机种子
-        Player1.CreatPlayerPower(nameInputField1.text);
-        Player2.CreatPlayerPower(nameInputField2.text);
+        Player1.CreatPlayer(nameInputField1.text,PlayerNo.Player1);
+        Player2.CreatPlayer(nameInputField2.text, PlayerNo.Player2);
+        SceneManager.LoadScene("BattleField");
     }
 
     // Update is called once per frame

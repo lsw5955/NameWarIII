@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerNo
+{
+    Player1,
+    Player2
+}
+
 [CreateAssetMenu(fileName = "new PlayerData", menuName = "创建玩家数据")]
 //[SerializeField]
 public class Scb_PlayerData : ScriptableObject
@@ -10,7 +16,7 @@ public class Scb_PlayerData : ScriptableObject
     //姓名
     public string mingZi;
     //职业
-    internal string zhiYe;
+    public string zhiYe;
     //最大生命值
     public int shengMing;
     //攻击力
@@ -20,8 +26,15 @@ public class Scb_PlayerData : ScriptableObject
     //闪避值
     public int shanBi;
 
+    //当前生命值
+    public int currentShengMing;
+
+    //玩家序号...可能有用, 没用删掉
+    public PlayerNo playerNo;
+
+
     //根据名称 生成属性, 同样字符串生成的属性不变
-    public void CreatPlayerPower(string playerName)
+    public void CreatPlayer(string playerName, PlayerNo playerNo)
     {
         zhiYe = "战士";
         mingZi = playerName;
@@ -29,5 +42,7 @@ public class Scb_PlayerData : ScriptableObject
         gongJi = 20;
         mingZhong = 70;
         shanBi = 20;
+        currentShengMing = shengMing;
+        this.playerNo = playerNo;
     }
 }
