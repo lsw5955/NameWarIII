@@ -248,8 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameInputField1: {fileID: 1342886653}
   nameInputField2: {fileID: 1019165609}
-  Player1: {fileID: 11400000, guid: 0c6ede1d754529f42955e69e127a3235, type: 2}
-  Player2: {fileID: 11400000, guid: 0822d27595c86dd4f93fdafcc166ad05, type: 2}
+  player1: {fileID: 11400000, guid: 0c6ede1d754529f42955e69e127a3235, type: 2}
+  player2: {fileID: 11400000, guid: 0822d27595c86dd4f93fdafcc166ad05, type: 2}
 --- !u!1 &617012296
 GameObject:
   m_ObjectHideFlags: 0

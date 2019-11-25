@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public InputField nameInputField1;
     public InputField nameInputField2;
     //两个玩家数据的序列化类
-    public Scb_PlayerData Player1;
-    public Scb_PlayerData Player2;
+    public Scb_PlayerData player1;
+    public Scb_PlayerData player2;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
     public void Battle()
     {
         //为玩家数据赋值, 数据使用姓名作为随机种子
-        Player1.CreatPlayer(nameInputField1.text,PlayerNo.Player1);
-        Player2.CreatPlayer(nameInputField2.text, PlayerNo.Player2);
+        player1.CreatPlayer(nameInputField1.text,PlayerNo.Player1);
+        player2.CreatPlayer(nameInputField2.text, PlayerNo.Player2);
         SceneManager.LoadScene("BattleField");
     }
 

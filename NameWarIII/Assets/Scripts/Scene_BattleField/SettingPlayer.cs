@@ -6,12 +6,14 @@ using UnityEngine.UI;
 /// <summary>
 /// 角色UI设置
 /// </summary>
-public class SettingPlayerUI : MonoBehaviour
+public class SettingPlayer : MonoBehaviour
 {
     //角色数据
     public Scb_PlayerData playerData;
     //角色头顶UI位置标记物体
     public Transform playerUIPos;
+    //角色替身显示位置
+    public Transform playerStandPos;
 
     [Header("UI elements")]
     //UI面板
@@ -28,6 +30,8 @@ public class SettingPlayerUI : MonoBehaviour
     {
         //UI初始化
         SetPlayerUI();
+        //替身初始化
+        SetPlayerStand();
     }
 
     // Update is called once per frame
@@ -41,10 +45,25 @@ public class SettingPlayerUI : MonoBehaviour
     /// </summary>
     void SetPlayerUI()
     {
+        if(playerData.playerNo == PlayerNo.Player2)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+
         uiPanel.transform.position = Camera.main.WorldToScreenPoint(playerUIPos.position);
         hpSlider.maxValue = playerData.shengMing;
         hpSlider.value = playerData.currentShengMing;
         nameText.text = playerData.mingZi;
-        currentHPText.text = playerData.currentShengMing.ToString(); 
+        currentHPText.text = playerData.currentShengMing.ToString();
+    }
+
+    void SetPlayerStand()
+    {
+        GameObject playerStand = Instantiate(playerData.playerStand, playerStandPos);
+
+        if (playerData.playerNo == PlayerNo.Player1)
+        {
+            playerStand.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 }

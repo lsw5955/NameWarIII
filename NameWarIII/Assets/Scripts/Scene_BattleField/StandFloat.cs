@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /// <summary>
 /// 让替身表现出浮动感觉
 /// </summary>
-public class StanderFloat : MonoBehaviour
+public class StandFloat : MonoBehaviour
 {
     //浮动时间
-    public float floatTime;
+    public float floatTime = 1;
     //浮动距离
-    public Vector2 floatDistance;    
+    public float floatDistance = 0.3f;    
     //记录浮动运动的起始点
     Vector2 originPos;
     //浮动运动计时器
@@ -46,6 +47,6 @@ public class StanderFloat : MonoBehaviour
     /// </summary>
     void MoveDestination()
     {
-        transform.position = Vector2.Lerp(originPos, originPos + floatDistance, timeCount / floatTime);
+        transform.position = Vector2.Lerp(originPos, originPos + new Vector2(0,floatDistance), timeCount / floatTime);
     }
 }
