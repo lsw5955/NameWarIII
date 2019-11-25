@@ -48,5 +48,6 @@ public class StandFloat : MonoBehaviour
     void MoveDestination()
     {
         transform.position = Vector2.Lerp(originPos, originPos + new Vector2(0,floatDistance), timeCount / floatTime);
+        Debug.Log("当前位置 : " + transform.position + "时间倒计时 : " + timeCount + "/" + floatTime);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// 角色UI设置
+/// 玩家各种数据与显示的初始化
 /// </summary>
 public class SettingPlayer : MonoBehaviour
 {
@@ -45,7 +45,8 @@ public class SettingPlayer : MonoBehaviour
     /// </summary>
     void SetPlayerUI()
     {
-        if(playerData.playerNo == PlayerNo.Player2)
+        //根据玩家站位调整图片朝向
+        if(playerData.playerNo == PlayerNo.Player1)
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -59,11 +60,14 @@ public class SettingPlayer : MonoBehaviour
 
     void SetPlayerStand()
     {
-        GameObject playerStand = Instantiate(playerData.playerStand, playerStandPos);
+        playerData.playerStand.transform.position = playerStandPos.transform.position;
+        playerData.playerStand.transform.parent = playerStandPos.transform;
 
+        //GameObject playerStand = Instantiate(playerData.playerStand, playerStandPos);
+        //根据玩家站位调整图片朝向
         if (playerData.playerNo == PlayerNo.Player1)
         {
-            playerStand.GetComponent<SpriteRenderer>().flipX = true;
+            playerData.playerStand.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 }

@@ -31,13 +31,5 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Debug.Log(nameInputField1.text);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Debug.Log(nameInputField2.text);
-        }
     }
 }

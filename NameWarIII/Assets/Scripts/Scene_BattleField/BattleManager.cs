@@ -21,14 +21,25 @@ public class BattleManager : MonoBehaviour
         player2.CreatPlayer("乌仁吉", PlayerNo.Player2);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        if(player1.mingZi == "" || player2.mingZi == "")
+        if (player1.playerStand == null || player2.mingZi == null)
         {
             DebugFun();
         }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
         Debug.Log("战斗即将开始");
+        StartCoroutine(Attack());
+    }
+
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(2.5f);
+        player1.playerStand.Attack(player2);
     }
 
     // Update is called once per frame

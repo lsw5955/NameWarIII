@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Player : MonoBehaviour
 {
-    //活动数据
+    //玩家数据
     public Scb_PlayerData playerData;
 
     

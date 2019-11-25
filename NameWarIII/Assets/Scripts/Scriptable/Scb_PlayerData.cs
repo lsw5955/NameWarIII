@@ -31,8 +31,8 @@ public class Scb_PlayerData : ScriptableObject
 
     //玩家序号...可能有用, 没用删掉
     public PlayerNo playerNo;
-
-    public GameObject playerStand;
+    //玩家替身使者
+    public Stand playerStand;
 
     //根据名称 生成属性, 同样字符串生成的属性不变
     public void CreatPlayer(string playerName, PlayerNo playerNo)
@@ -46,7 +46,7 @@ public class Scb_PlayerData : ScriptableObject
         shanBi = 20;
         currentShengMing = shengMing;
         this.playerNo = playerNo;
-        playerStand = (GameObject)Resources.Load("Prefabs/Stands/StandWarrior") ;
-        //Debug.Log(playerStand);
+        playerStand = Instantiate((GameObject)Resources.Load("Prefabs/Stands/StandWarrior")).GetComponent<Stand>();
+        Debug.Log(playerStand);
     }
 }
