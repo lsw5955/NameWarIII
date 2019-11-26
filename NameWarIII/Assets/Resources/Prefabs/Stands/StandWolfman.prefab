@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8926802768463439816}
   - component: {fileID: 8926802768463439817}
   - component: {fileID: 8926802768463439797}
-  - component: {fileID: 8926802768463439818}
+  - component: {fileID: 3003817745193304514}
   m_Layer: 0
-  m_Name: StandWarrior
+  m_Name: StandWolfman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5326506590309340804, guid: bf41d82b9a79f774aac670f30dd80b79,
+  m_Sprite: {fileID: -2998338152750262989, guid: ff963a67f1a4ea3418c09a071988f3bf,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 8926802768463439822}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 676893943e8abed4f8f54783de6bbd0f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 23d568efe120f0f41bf6c110da4cb6d2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
   floatDistance: 0.3
   originPos: {x: 0, y: 0}
   timeCount: 0
---- !u!114 &8926802768463439818
+--- !u!114 &3003817745193304514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,10 +127,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8926802768463439822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b76efb78ee3f28409fdb0987f176a0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5146762412fb68d4cb8f41ac95c82668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   standName: 
   enterWords: 
+  posOffSet: {x: 0, y: -1, z: 0}
   attackEffect: {fileID: 3077770697021988039, guid: 48b84a17fe88b104c813066b1e818869,
     type: 3}

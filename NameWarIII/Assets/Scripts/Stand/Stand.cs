@@ -12,11 +12,19 @@ public class Stand : MonoBehaviour
 {
     //替身名称
     public string standName;
+    //替身登场台词
+    public string enterWords;
+
+    //因为每个图片都尺寸不一, 需要设置一个坐标偏移 微调下
+    public Vector3 posOffSet;
+
+    //攻击到对方的特效
+    public ParticleSystem attackEffect;
 
     //替身的动作动画
     Animator anim;
 
-    private void Awake()
+    public virtual void Awake()
     {
         //获取动画播放组件
         anim = GetComponent<Animator>();
@@ -24,6 +32,8 @@ public class Stand : MonoBehaviour
 
     private void Start()
     {
+        standName = "始祖";
+        enterWords = "一切因我而起, 就由我来终结";
     }
 
     /// <summary>
@@ -31,16 +41,17 @@ public class Stand : MonoBehaviour
     /// </summary>
     /// <param name="player">施展普通攻击的玩家</param>
     /// <param name="target">普通攻击的目标玩家</param>
-    public virtual void Attack(Scb_PlayerData target)
+    public virtual void Attack(Player target)
     {
+        Debug.Log(anim);
         anim.SetTrigger("Attack");
         StartCoroutine(WaitAndDo(target));
     }
 
-    IEnumerator WaitAndDo(Scb_PlayerData target)
+    IEnumerator WaitAndDo(Player target)
     {
         yield return new WaitForSeconds(1f);
-        target.playerStand.GetComponent<Stand>().GetDamage();
+        target.playerData.playerStand.GetComponent<Stand>().GetDamage();
     }
 
     /// <summary>
@@ -49,6 +60,9 @@ public class Stand : MonoBehaviour
     public virtual void GetDamage()
     {
         anim.SetTrigger("GetDamage");
+        
+        Destroy(Instantiate(attackEffect, transform.position,Quaternion.identity), 1f);
+        
     }
     
 }

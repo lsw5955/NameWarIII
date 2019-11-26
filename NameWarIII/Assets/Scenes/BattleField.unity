@@ -120,6 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &249021108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4355905072809262985, guid: a4f020891f5faec44894fdafde9a2a59,
+    type: 3}
+  m_PrefabInstance: {fileID: 4355905073284531411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c15a94f4bed7db488bfeee51005f963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &901224646
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,8 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3acbdfa698e3d41a8202a26007b26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 11400000, guid: 0c6ede1d754529f42955e69e127a3235, type: 2}
-  player2: {fileID: 11400000, guid: 0822d27595c86dd4f93fdafcc166ad05, type: 2}
+  player1: {fileID: 249021108}
+  player2: {fileID: 987731782}
 --- !u!4 &901224648
 Transform:
   m_ObjectHideFlags: 0
@@ -165,6 +177,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &987731782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4355905072809262985, guid: a4f020891f5faec44894fdafde9a2a59,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808103985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c15a94f4bed7db488bfeee51005f963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1223878837
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +350,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 4355905072809262985, guid: a4f020891f5faec44894fdafde9a2a59,
+        type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0822d27595c86dd4f93fdafcc166ad05,
+        type: 2}
     - target: {fileID: 4355905072845034985, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,7 +424,7 @@ PrefabInstance:
     - target: {fileID: 4355905072809262986, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4355905072809262986, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}
@@ -406,12 +436,16 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4355905072809262985, guid: a4f020891f5faec44894fdafde9a2a59,
+    - target: {fileID: 4355905072809262980, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0822d27595c86dd4f93fdafcc166ad05,
-        type: 2}
+      propertyPath: m_Name
+      value: player2Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355905073192726489, guid: a4f020891f5faec44894fdafde9a2a59,
+        type: 3}
+      propertyPath: m_Name
+      value: Player2Canvas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f020891f5faec44894fdafde9a2a59, type: 3}
 --- !u!1001 &4355905073284531411
@@ -494,12 +528,22 @@ PrefabInstance:
     - target: {fileID: 4355905072809262986, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4355905072809262986, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355905072809262980, guid: a4f020891f5faec44894fdafde9a2a59,
+        type: 3}
+      propertyPath: m_Name
+      value: player1Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355905073192726489, guid: a4f020891f5faec44894fdafde9a2a59,
+        type: 3}
+      propertyPath: m_Name
+      value: Player1Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 4355905073192726494, guid: a4f020891f5faec44894fdafde9a2a59,
         type: 3}

@@ -29,6 +29,9 @@ public class Scb_PlayerData : ScriptableObject
     //当前生命值
     public int currentShengMing;
 
+    //登场台词
+    public string enterWords;
+
     //玩家序号...可能有用, 没用删掉
     public PlayerNo playerNo;
     //玩家替身使者
@@ -46,7 +49,17 @@ public class Scb_PlayerData : ScriptableObject
         shanBi = 20;
         currentShengMing = shengMing;
         this.playerNo = playerNo;
-        playerStand = Instantiate((GameObject)Resources.Load("Prefabs/Stands/StandWarrior")).GetComponent<Stand>();
-        Debug.Log(playerStand);
+        if(playerNo == PlayerNo.Player2)
+        {
+            playerStand = Instantiate((GameObject)Resources.Load("Prefabs/Stands/StandWarrior")).GetComponent<Stand>();
+        }
+        else
+        {
+            playerStand = Instantiate((GameObject)Resources.Load("Prefabs/Stands/StandWolfman")).GetComponent<Stand>();
+        }
+        //防止对象实例在跳转场景时被销毁 后续应该会改成跳转过去再初始化数据
+        DontDestroyOnLoad(playerStand);
+        enterWords = playerStand.enterWords;
+        //Debug.Log(playerStand);
     }
 }

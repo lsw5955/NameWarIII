@@ -12,13 +12,17 @@ public class StandFloat : MonoBehaviour
     //浮动距离
     public float floatDistance = 0.3f;    
     //记录浮动运动的起始点
-    Vector2 originPos;
+    public Vector2 originPos;
     //浮动运动计时器
-    float timeCount;
+    public float timeCount;
     //浮动运动的距离
 
     // Start is called before the first frame update
     void Start()
+    {
+    }
+
+    private void OnEnable()
     {
         //设置浮动起始点为当前坐标
         originPos = transform.position;
@@ -48,6 +52,5 @@ public class StandFloat : MonoBehaviour
     void MoveDestination()
     {
         transform.position = Vector2.Lerp(originPos, originPos + new Vector2(0,floatDistance), timeCount / floatTime);
-        Debug.Log("当前位置 : " + transform.position + "时间倒计时 : " + timeCount + "/" + floatTime);
     }
 }

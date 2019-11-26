@@ -7,14 +7,14 @@ using UnityEngine;
 /// </summary>
 public class StandWarrior : Stand
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Awake()
     {
+        base.Awake();
         standName = "白金之星";
+        enterWords = "你失败的原因只有一个, 那就是你惹怒我了!";
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
