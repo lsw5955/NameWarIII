@@ -10,15 +10,12 @@ public class Test : MonoBehaviour
 
     private void Start()
     {
-        a = 10;
-        Test b;//= this;
-        TestFun(out b);
-        Debug.Log(b.a);
+
     }
 
-    void TestFun(out Test x)
+    void OnParticleSystemStopped()
     {
-        x = new Test();
-        x.a = 1000;
+        Debug.Log("试试");
     }
+
 }
