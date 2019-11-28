@@ -10,6 +10,8 @@ public class Test : MonoBehaviour
 
     string name;
 
+    public ParticleSystem ps;
+
     private void Start()
     {
         A = new Test();
@@ -18,7 +20,14 @@ public class Test : MonoBehaviour
         B.name = "B";
         Experiment(A);
         Experiment(ref A);
-        
+        Debug.Log(ps.isPaused);
+        ps.Pause();
+        Debug.Log(ps.isPaused);
+
+    }
+
+    private void Update()
+    {
     }
 
     void Experiment(Test exp)
