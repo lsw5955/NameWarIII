@@ -47,9 +47,10 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         Debug.Log("战斗即将开始");
-        //
+        //一人说一句话
         player1.SayWords(player1.playerData.enterWords);
         player2.SayWords(player2.playerData.enterWords);
+
         StartCoroutine(Attack(player1,player2,2.5f));
         StartCoroutine(Attack(player2,player1,5f));
     }

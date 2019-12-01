@@ -18,8 +18,8 @@ public class Stand : MonoBehaviour
     //因为每个图片都尺寸不一, 需要设置一个坐标偏移 微调下
     public Vector3 posOffSet;
 
-    //攻击到对方的特效
-    public ParticleSystem attackEffect;
+    //攻击到对方的粒子特效
+    public ParticleSystem attackParticleEffect;
 
     //替身的动作动画
     Animator anim;
@@ -53,16 +53,14 @@ public class Stand : MonoBehaviour
         yield return new WaitForSeconds(1f);
         target.playerData.playerStand.GetComponent<Stand>().GetDamage();
     }
-
     /// <summary>
     /// 收到伤害时的播放动画
     /// </summary>
     public virtual void GetDamage()
     {
         anim.SetTrigger("GetDamage");
-        
-        Destroy(Instantiate(attackEffect, transform.position,Quaternion.identity), 1f);
-        
+        //延迟销毁创建的粒子特效, 这里使用对象池是否可以优化性能, 还未探索, 本项目意义不大, 但是需要思考和尝试
+        Destroy(Instantiate(attackParticleEffect, transform.position, Quaternion.identity).gameObject, attackParticleEffect.main.startLifetime.constant);//0.5f);
     }
-    
+
 }

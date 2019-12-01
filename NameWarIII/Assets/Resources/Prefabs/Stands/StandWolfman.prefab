@@ -133,5 +133,5 @@ MonoBehaviour:
   standName: 
   enterWords: 
   posOffSet: {x: 0, y: -1, z: 0}
-  attackEffect: {fileID: 3077770697021988039, guid: 48b84a17fe88b104c813066b1e818869,
+  attackParticleEffect: {fileID: 3077770697021988039, guid: 48b84a17fe88b104c813066b1e818869,
     type: 3}

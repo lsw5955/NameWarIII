@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Transform playerUIPos;
     //角色替身显示位置
     public Transform playerStandPos;
+    //角色台词显示位置
     public Transform playerWordsPos;
 
     [Header("UI elements")]
@@ -90,7 +91,16 @@ public class Player : MonoBehaviour
 
     public void SayWords(string words)
     {
+        wordsText.gameObject.SetActive(true);
         wordsText.text = words;
+        StartCoroutine(DelayHideObject(wordsPanel.gameObject));
+    }
+
+    IEnumerator DelayHideObject(GameObject ob)
+    {
+        yield return new WaitForSeconds(2);
+        ob.SetActive(false);
+
     }
 
     public void Attack(Player target)

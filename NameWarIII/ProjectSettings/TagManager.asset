@@ -16,9 +16,9 @@ TagManager:
   - Player
   - Stand
   - Particle
-  - 
-  - 
-  - 
+  - Forground
+  - Midground
+  - Background
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3282319033
+    locked: 0
+  - name: Midground
+    uniqueID: 2462674171
+    locked: 0
+  - name: Background
+    uniqueID: 1248426487
     locked: 0

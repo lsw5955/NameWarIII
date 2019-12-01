@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4355905072007478362}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4355905072599758914}
   - component: {fileID: 4355905072599758913}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,8 +274,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1832293125
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e666868709122094cbc9a0a0de44dbf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4355905072845034985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerPfb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 4355905072849747866}
   - component: {fileID: 4355905072849747864}
   - component: {fileID: 4355905072849747865}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 4355905073037080459}
   - component: {fileID: 4355905073037080457}
   - component: {fileID: 4355905073037080458}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: CurrentHPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 4355905073104391927}
   - component: {fileID: 4355905073104391920}
   - component: {fileID: 4355905073104391921}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 4355905073164177259}
   - component: {fileID: 4355905073164177257}
   - component: {fileID: 4355905073164177258}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 4355905073192726494}
   - component: {fileID: 4355905073192726495}
   - component: {fileID: 4355905073192726488}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 4355905073418511123}
   - component: {fileID: 4355905073418511121}
   - component: {fileID: 4355905073418511122}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: StatUIPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 988352765932897118}
   - component: {fileID: 701222576409236276}
   - component: {fileID: 8680640732079036131}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Words
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 3241680064970727936}
   - component: {fileID: 2471696766539183719}
   - component: {fileID: 6353555414019669595}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: WordsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
