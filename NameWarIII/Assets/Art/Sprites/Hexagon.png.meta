@@ -1,15 +1,12 @@
 fileFormatVersion: 2
-guid: 91b85f5729c869b4c9dff4f69c8d2faf
+guid: 8e709f0b097eb70479dc949daab9d8a4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 2695397407002535339
-    second: Platform_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,25 +31,25 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 3
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 71, y: 0, z: 67, w: 0}
+  spritePixelsToUnits: 4
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -65,7 +62,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -76,7 +73,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -87,7 +84,7 @@ TextureImporter:
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -98,7 +95,7 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -109,7 +106,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -118,56 +115,23 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Platform_0
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 0
-        width: 313
-        height: 188
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 125, y: 148, z: 122, w: 28}
-      outline:
-      - - {x: -115.5, y: -36}
-        - {x: -114.5, y: -38}
-        - {x: -111.5, y: -38}
-        - {x: -108.5, y: -37}
-        - {x: -108.5, y: -35}
-        - {x: -111.5, y: -31}
-        - {x: -113.5, y: -31}
-        - {x: -115.5, y: -32}
-      - - {x: -107.5, y: 4}
-        - {x: -107.5, y: 71}
-        - {x: -24.5, y: 71}
-        - {x: -24.5, y: 4}
-      - - {x: 43.5, y: -5}
-        - {x: 43.5, y: 55}
-        - {x: 115.5, y: 55}
-        - {x: 115.5, y: -5}
-      physicsShape:
-      - - {x: -108.5, y: 8}
-        - {x: -108.5, y: 82}
-        - {x: -35.5, y: 81}
-        - {x: -36.5, y: 8}
-      - - {x: 50.5, y: -27}
-        - {x: 50.5, y: 39}
-        - {x: 119.5, y: 39}
-        - {x: 119.5, y: -27}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fc6d77d372f4ed4fb44f421b070eac9
-      internalID: 2695397407002535339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    outline: []
-    physicsShape: []
+    sprites: []
+    outline:
+    - - {x: 0, y: 2}
+      - {x: -1.7320509, y: 0.99999994}
+      - {x: -1.7320508, y: -1.0000001}
+      - {x: 0.00000017484555, y: -2}
+      - {x: 1.7320509, y: -0.9999998}
+      - {x: 1.7320509, y: 0.9999998}
+    physicsShape:
+    - - {x: 0, y: 2}
+      - {x: -1.7320509, y: 0.99999994}
+      - {x: -1.7320508, y: -1.0000001}
+      - {x: 0.00000017484555, y: -2}
+      - {x: 1.7320509, y: -0.9999998}
+      - {x: 1.7320509, y: 0.9999998}
     bones: []
-    spriteID: d57cb88f8f768e042a23dcfefec874ae
+    spriteID: b4bf5b9d84f8dcd4d8a01295446122e2
     internalID: 0
     vertices: []
     indices: 

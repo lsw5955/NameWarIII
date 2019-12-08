@@ -8,9 +8,7 @@ using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
     //回合数字
-    int turnCount;
-
-    
+    int turnCount;    
 
     //两个玩家
     public Player player1;
@@ -33,10 +31,13 @@ public class BattleManager : MonoBehaviour
 
     private void Awake()
     {
+        //初始化玩家数据
         player1Data = player1.playerData;
         player2Data = player2.playerData;
-
-        Debug.Log(player1Data.playerStand + "||" + player2Data.playerStand);
+        //初始化回合数
+        turnCount = 0;
+        
+        //调试语句, 如果数据不完整就重新创建下数据
         if (player1Data.playerStand == null || player2Data.playerStand == null)
         {
             DebugFun();
@@ -47,11 +48,8 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         Debug.Log("战斗即将开始");
-        //一人说一句话
-        player1.SayWords(player1.playerData.enterWords);
         player2.SayWords(player2.playerData.enterWords);
 
-        StartCoroutine(Attack(player1,player2,2.5f));
         StartCoroutine(Attack(player2,player1,5f));
     }
 
@@ -64,6 +62,25 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    /// <summary>
+    /// 回合切换及玩家行动
+    /// </summary>
+    void DoTrun()
+    {
+        //偶数回合玩家1行动,反之玩家2行动
+        if ((turnCount % 2) == 0)
+        {
+            //临时一人说一句话
+            player1.SayWords(player1.playerData.enterWords);
+
+            //临时攻击
+            StartCoroutine(Attack(player1, player2, 2.5f));
+        }
+        else
+        {
+
+        }
     }
 }

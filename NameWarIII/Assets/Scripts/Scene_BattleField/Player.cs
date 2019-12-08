@@ -70,9 +70,13 @@ public class Player : MonoBehaviour
         uiPanel.transform.position = Camera.main.WorldToScreenPoint(playerUIPos.position);
         //设置对话框显示位置, 这个就需要偏移下了 正好用到了 之前我有疑惑的父子坐标问题
         wordsPanel.transform.position = Camera.main.WorldToScreenPoint(playerWordsPos.position);
+        //设置生命值Slider最大值
         hpSlider.maxValue = playerData.shengMing;
+        //设置生命值Slider当前值
         hpSlider.value = playerData.currentShengMing;
+        //设置玩家名字
         nameText.text = playerData.mingZi;
+        //设置生命值文本
         currentHPText.text = playerData.currentShengMing.ToString();
     }
 
@@ -89,6 +93,8 @@ public class Player : MonoBehaviour
         }
     }
 
+
+    //临时的说话方法
     public void SayWords(string words)
     {
         wordsText.gameObject.SetActive(true);
@@ -96,6 +102,7 @@ public class Player : MonoBehaviour
         StartCoroutine(DelayHideObject(wordsPanel.gameObject));
     }
 
+    //临时的隐藏方法
     IEnumerator DelayHideObject(GameObject ob)
     {
         yield return new WaitForSeconds(2);
@@ -103,6 +110,7 @@ public class Player : MonoBehaviour
 
     }
 
+    //临时的攻击方法
     public void Attack(Player target)
     {
         playerData.playerStand.Attack(target);
